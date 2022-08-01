@@ -1,0 +1,70 @@
+<meta charset="utf-8">
+<input>
+    <button>
+    verifica si acerto
+    </button>
+    </input>
+
+<script>
+    function aleatorio() {
+        return Math.round(Math.random() * 10);
+    }
+    function sortearnum(cantidad) {
+        var secretos = [];
+        var cont = 1;
+
+        while (cont <= cantidad) {
+            numeroaleatorio =aleatorio();
+            console.log(secretos);
+            encontrado = false;
+            if (numeroaleatorio !=0 ) {
+                for (var posicion=0; posicion<= secretos.length; posicion++) {
+                    if (numeroaleatorio == secretos[posicion]) {
+                        encontrado = true;
+                        break;
+                    }
+                
+                }
+                if(encontrado ==false){
+                    secretos.push(numeroaleatorio);
+                    cont++;
+                }
+
+            }  
+            
+        }
+        return secretos
+        
+    }
+    
+    var secretos = sortearnum(4); 
+    console.log(secretos);
+
+    var input = document.querySelector("input");
+
+    input.focus();
+
+    function verifica() {
+        var encontrado = false;
+        for (var posicion = 0; posicion < secretos.length; posicion++) {
+
+            if (secretos[posicion] == parseInt(input.value)) {
+                alert("bien")
+                encontrado = true;
+                break;
+            }
+        }   
+        if(encontrado == false){
+         
+        alert("erro"); 
+        }
+        input.value="";
+        input.focus();
+    
+            
+    }
+        
+        var button = document.querySelector("button");
+        button.onclick = verifica;
+    
+</script>

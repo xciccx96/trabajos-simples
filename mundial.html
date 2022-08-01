@@ -1,0 +1,29 @@
+<meta charset="utf-8">
+
+<h1> programa munidal</h1>
+
+
+
+<script>
+	//funcion que realiza saltos de lineas
+	function saltolinea() {
+		var saltoL = "<br><br><hr><br><br>"
+		document.write(saltoL)
+	}
+
+	//funcion que imprime las frases en pantallas
+	function imprimir(frase) {
+		document.write("<big>"+frase+ "</big>")
+		saltolinea()
+	}
+
+    var aniomundial = 1930;
+    var limite = parseInt(prompt("ingrese año limite para calcular"))
+
+    while (aniomundial <= limite){
+        imprimir("hubo mundia"+aniomundial)
+        aniomundial = aniomundial+4;
+    }
+
+    imprimir("se acabo el mundial")
+</script> 

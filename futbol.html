@@ -1,0 +1,43 @@
+<meta charset="utf-8">
+
+<h1> programa calcula puntos futbol</h1>
+
+<script>
+	//funcion que realiza saltos de lineas
+	function saltolinea() {
+		var saltoL = "<br><br><hr><br><br>"
+		document.write(saltoL)
+	}
+
+	//funcion que imprime las frases en pantallas
+	function imprimir(frase) {
+		document.write("<big>"+frase+ "</big>")
+		saltolinea()
+	}
+
+	var victorias = parseInt(prompt("informe la cantidad de vistorias"));
+	var empates = parseInt(prompt("informe la cantidad de empates"));
+
+	puntosTotal = (victorias * 3) + empates;
+
+	imprimir("el total de puntos es " + puntosTotal)
+
+	if (puntosTotal > 28){
+		imprimir("estan mejor que el año pasado " + puntosTotal)
+
+	}
+	if(puntosTotal < 28){
+		imprimir("estan peor que el año pasado " + puntosTotal)
+
+	}
+	if(puntosTotal == 28){
+		imprimir("estan igual que el año pasado " + puntosTotal)
+
+	}
+
+
+
+
+
+
+</script>

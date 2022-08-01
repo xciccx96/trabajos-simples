@@ -1,0 +1,64 @@
+<meta charset="utf-8">
+
+<h1> programa calcula imc</h1>
+
+<script>
+	alert("imc");
+</script>
+
+<script>
+	//funcion que realiza saltos de lineas
+	function saltolinea() {
+		var saltoL = "<br><br><hr><br><br>"
+		document.write(saltoL)
+	}
+
+	//funcion que imprime las frases en pantallas
+	function imprimir(frase) {
+		document.write("<big>"+frase+ "</big>")
+		saltolinea()
+	}
+	//funcion dentro de otra funcion
+	function calcular(peso,altura,nombre) {
+		imc = (peso / (altura * altura));
+		imprimir("el imc de " +nombre+ " es:" + imc);
+	}
+	//funcion calcula el promedio de imc
+	function promedio(peso,altura) {
+		imc = (peso / (altura * altura));	
+		return (imc);
+	}
+
+//imc de dos personas por separado
+	calcular( 70,1.85, "carlos");
+	calcular( 70,1.73, "juan")
+
+
+//imc promedio de 2 personas
+
+	var imcC = promedio(70,1.85);
+	var imcJ = promedio(70,1.73);
+	imprimir("el promedio de carlos y juan es " +(imcC+imcJ)/2);
+
+//imput imc
+	nombre = prompt(" ponga su nombre");
+	peso = prompt(nombre + " ponga su peso");
+	altura =prompt(nombre +" ponga altura");
+	imcCal = promedio(peso,altura);
+
+	imprimir(nombre +" el imc es: "+ imcCal);
+
+	if (imcCal < 18.5){
+		imprimir("indeficiencia ponderal");
+	}if (imcCal >= 18.5 && imcCal < 25){
+		imprimir("abajo de lo recomendado");
+	}
+	if (imcCal >= 25 && imcCal < 30){
+		imprimir("sobrepeso");
+	}
+	if (imcCal >= 30){
+		imprimir("obesidad");
+	}
+
+</script>
+

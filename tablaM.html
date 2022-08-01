@@ -1,0 +1,34 @@
+<meta charset="utf-8">
+
+<h1> programa munidal</h1>
+
+
+
+<script>
+	//funcion que realiza saltos de lineas
+	function saltolinea() {
+		var saltoL = "<br><br><hr><br><br>"
+		document.write(saltoL)
+	}
+
+	//funcion que imprime las frases en pantallas
+	function imprimir(frase) {
+		document.write("<big>"+frase+ "</big>")
+		saltolinea()
+	}
+
+    var multiplicador = 1
+    imprimir("while");
+    while (multiplicador <= 10) {
+        imprimir(5 * multiplicador);
+        multiplicador = multiplicador + 1;
+        //multiplicador ++ 
+        
+    }
+
+    imprimir("for");
+    for (multiplicador = 1 ;multiplicador <= 10 ;multiplicador = multiplicador + 1 ) {
+        
+        imprimir(5 * multiplicador);
+    }
+</script> 

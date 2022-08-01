@@ -1,0 +1,46 @@
+
+<meta charset="utf-8">
+
+<h1> programa</h1>
+
+<script>
+	alert("esto es una alerta");
+</script>
+
+<script>
+	function saltolinea() {
+		var saltoL = "<br><br><hr><br><br>"
+		document.write(saltoL)
+	}
+
+	function imprimir(frase) {
+		document.write("<big>"+frase+ "</big>")
+		saltolinea()
+	}
+	
+	var anio = 2022;
+
+	var juanE = 20;
+	var pedroE = 25;
+	var carlosE = 16;
+
+	var nombre1 = "juan";
+	var nombre2 = "pedro";
+	var nombre3 = "carlos";
+
+	promedio = (juanE+pedroE+carlosE)/3
+
+	//esta imprimiendo el promedio
+	imprimir("holaaaa")
+	imprimir("el promedio de " + nombre1 + ","+ nombre2 + "," + nombre3 + " es;" +Math.round(promedio))
+
+	imprimir("juan tiene " + (anio-2000) + " años")
+
+	imprimir("pedro tiene " + (anio-1996) + " años")
+
+	anio = 2023;
+
+	document.write("carlos tiene " + (anio-2007) + " años")
+</script>
+
+

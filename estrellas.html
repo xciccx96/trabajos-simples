@@ -1,0 +1,28 @@
+<meta charset="utf-8">
+
+<h1> programa juego</h1>
+
+
+
+<script>
+	//funcion que realiza saltos de lineas
+	function saltolinea() {
+		var saltoL = "<br>"
+		document.write(saltoL)
+	}
+
+	//funcion que imprime las frases en pantallas
+	function imprimir(frase) {
+		document.write("<big>"+frase+ "</big>")
+		saltolinea()
+	}
+
+    for (var lineas =1; lineas <= 3; lineas++) {
+        for (var column =1; column <= 10; column++) {
+            document.write("*");
+        
+        }
+        saltolinea();
+    }
+	
+</script> 

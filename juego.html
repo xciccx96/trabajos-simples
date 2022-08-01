@@ -1,0 +1,45 @@
+<meta charset="utf-8">
+
+<h1> programa juego</h1>
+
+
+
+<script>
+	//funcion que realiza saltos de lineas
+	function saltolinea() {
+		var saltoL = "<br><br><hr><br><br>"
+		document.write(saltoL)
+	}
+
+	//funcion que imprime las frases en pantallas
+	function imprimir(frase) {
+		document.write("<big>"+frase+ "</big>")
+		saltolinea()
+	}
+
+    var numeropensado =Math.round(Math.random() * 10);
+	var intentos = 3;
+	var cont = 1;
+	while (cont <= intentos) {
+		
+		var numerolanzado = parseInt(prompt("ingrese entre 0-10"))
+		
+		if (numeropensado  == numerolanzado){
+
+        	alert("usted acerto"+cont+"el numero es"+numeropensado)
+		break;
+    	}
+    	else{
+        	alert("usted no acerto ")
+    	}
+		cont++;
+		}
+    	if (numeropensado  == numerolanzado){
+
+			imprimir("usted acerto"+cont+"el numero es"+numeropensado)
+		}
+		else{
+			imprimir("usted no acerto era el"+numeropensado)
+		}
+	
+</script> 

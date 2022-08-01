@@ -1,0 +1,34 @@
+<meta charset="utf-8">
+
+<h1> programa edad</h1>
+
+
+
+<script>
+	//funcion que realiza saltos de lineas
+	function saltolinea() {
+		var saltoL = "<br><br><hr><br><br>"
+		document.write(saltoL)
+	}
+
+	//funcion que imprime las frases en pantallas
+	function imprimir(frase) {
+		document.write("<big>"+frase+ "</big>")
+		saltolinea()
+	}
+    var numMiembros = parseInt(prompt("ingrese cantidad de familia"));
+    var cont = 1;
+    var totalEdades = 0;
+
+    while (cont <= numMiembros) {
+        edad = parseInt(prompt("la edad"));
+        totalEdades = totalEdades + edad;
+        cont++;
+
+    }
+    edadMedia = (totalEdades/numMiembros);
+    imprimir("edad media es"+ edadMedia);
+    imprimir("totalEdades"+totalEdades);
+
+
+</script> 
